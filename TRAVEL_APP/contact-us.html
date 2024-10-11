@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Deals - Contact Us</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+    <header>
+        <h1>Travel Deals</h1>
+        <p id="date-time" style="margin: 0; font-size: 1em; color: white;"></p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="stays.html">Stays</a></li>
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="cruises.html">Cruises</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Contact Us</h2>
+        <form id="contact-form" onsubmit="return validateContactForm()">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" required>
+            <div class="error" id="first-name-error"></div>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" required>
+            <div class="error" id="last-name-error"></div>
+
+            <label for="phone-number">Phone Number:</label>
+            <input type="text" id="phone-number" placeholder="(ddd) ddd-dddd" required>
+            <div class="error" id="phone-number-error"></div>
+
+            <label for="gender">Gender:</label>
+            <input type="radio" id="gender-male" name="gender" value="male"> Male
+            <input type="radio" id="gender-female" name="gender" value="female"> Female
+            <div class="error" id="gender-error"></div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <div class="error" id="email-error"></div>
+
+            <label for="comment">Comment:</label>
+            <textarea id="comment" required></textarea>
+            <div class="error" id="comment-error"></div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Travel Deals</p>
+        <p id="date-time"></p>
+    </footer>    
+
+    <script src="js/script.js"></script>
+</body>
+</html>

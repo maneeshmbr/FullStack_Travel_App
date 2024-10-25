@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Deals - Cruises</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+    <!-- Add jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Travel Deals</h1>
+        <p id="date-time" style="margin: 0; font-size: 1em; color: white;"></p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="stays.html">Stays</a></li>
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="cruises.html">Cruises</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-wrapper">
+        <!-- Sidebar for Settings -->
+        <div class="sidebar">
+            <h3>Settings</h3>
+
+            <!-- Font Size Control -->
+            <label for="font-slider">Font Size:</label>
+            <input type="range" id="font-slider" min="12" max="32" value="16" step="1"
+                   onchange="changeFontSize(this.value)">
+            <span id="font-size-value">16px</span><br><br>
+
+            <!-- Background Color Control -->
+            <label for="bg-slider">Background Color:</label>
+            <input type="color" id="bg-slider" value="#ffffff" onchange="changeBackgroundColor(this.value)">
+        </div>
+
+        <!-- Main Content Section -->
+        <div id="main-content">
+            <section>
+                <h2>Cruises</h2>
+
+                <div id="error-messages" style="color: red;"></div>
+
+                <form id="cruise-form">
+                    <label for="destination">Destination:</label>
+                    <select id="destination" required>
+                        <option value="">Select a destination</option>
+                        <option value="Alaska">Alaska</option>
+                        <option value="Bahamas">Bahamas</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Mexico">Mexico</option>
+                    </select><br>
+
+                    <label for="departing-date">Departing Date:</label>
+                    <input type="date" id="departing-date" required><br>
+
+                    <label for="duration">Duration (Days):</label>
+                    <input type="number" id="duration" min="3" max="10" required><br>
+
+                    <label for="adults">Adults:</label>
+                    <input type="number" id="adults" min="1" required><br>
+
+                    <label for="children">Children:</label>
+                    <input type="number" id="children" min="0"><br>
+
+                    <label for="infants">Infants:</label>
+                    <input type="number" id="infants" min="0"><br>
+
+                    <button type="submit">Search Cruises</button>
+                </form>
+
+                <div id="booking-info"></div> <!-- Display booking information here -->
+            </section>
+            
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Travel Deals</p>
+		<p>CS 6314 Section 002</p>
+		<p>Bhanu Maneesh Reddy Mannem - BXM220055</p>
+		<p>Nikhil Manda - NXM180037</p>
+		<p>Snehal Kumar Ketala - SXK220463</p>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="js/cruises.js"></script>
+</body>
+</html>
